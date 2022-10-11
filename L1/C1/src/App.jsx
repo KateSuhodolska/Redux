@@ -20,7 +20,9 @@ class App extends Component {
         <ThemeContext.Provider value={this.state.theme}>
           <ThemedButton onClick={this.toggleTheme}>Dynamic Theme</ThemedButton>
         </ThemeContext.Provider>
-        <ThemedButton onClick={this.toggleTheme}>Default Theme</ThemedButton>
+        <ThemeContext.Provider>
+          <ThemedButton onClick={this.toggleTheme}>Default Theme</ThemedButton>
+        </ThemeContext.Provider>
       </div>
     );
   }
