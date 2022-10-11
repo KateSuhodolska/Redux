@@ -1,19 +1,21 @@
-import React, { Component } from "react";
-import { ThemeContext } from "./themes-context";
+import React from "react";
+import { ThemesContext } from "./themes-context.js";
 
-class ThemedButton extends Component {
+class ThemedButton extends React.Component {
   render() {
     return (
       <button
-        className="btn"
         {...this.props}
         style={{
-          background: this.context.background,
+          backgroundColor: this.context.background,
           color: this.context.fontColor,
         }}
-      ></button>
+        className="btn"
+      />
     );
   }
 }
-ThemedButton.contextType = ThemeContext;
+
+ThemedButton.contextType = ThemesContext;
+
 export default ThemedButton;
