@@ -9,5 +9,6 @@ store.subscribe(() => {
 
 store.dispatch(setLanguage("uk"));
 store.dispatch(addProduct({ id: 1, productName: "ball" }));
+store.dispatch(removeProduct(1));
 store.dispatch(setUser({ name: "Tom" }));
 store.dispatch(removeUser());
