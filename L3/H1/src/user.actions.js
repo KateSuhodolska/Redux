@@ -1,9 +1,7 @@
 export const setUser = (userData) => {
     return {
         type: "USER/ADD",
-        payload: {
-            userData,
-        },
+        payload: userData,
     };
 };
 

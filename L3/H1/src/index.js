@@ -8,6 +8,6 @@ store.subscribe(() => {
 });
 
 store.dispatch(setLanguage("uk"));
-store.dispatch(addProduct(1, { product: "ball" }));
+store.dispatch(addProduct({ id: 1, productData: "ball" }));
 store.dispatch(setUser({ name: "Tom" }));
 store.dispatch(removeUser());

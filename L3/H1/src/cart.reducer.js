@@ -3,12 +3,12 @@ export const cartReducer = (state = { products: [] }, action) => {
         case "CART/ADD":
             return {
                 ...state,
-                products: state.products.concat(action.payload.productData),
+                products: [...state.products].concat(action.payload.productData),
             };
 
         case "CART/REMOVE":
             const newProductsList = state.products.filter(
-                (product) => product.id !== action.payload.id
+                (product) => product.id !== action.payload
             );
             return {
                 ...state,

@@ -1,15 +1,9 @@
-export const userReducer = (state = { user: null }, action) => {
+export const userReducer = (state = null, action) => {
     switch (action.type) {
         case "USER/ADD":
-            return {
-                ...state,
-                user: action.payload.userData,
-            };
+            return action.payload;
         case "USER/REMOVE":
-            return {
-                ...state,
-                user: null,
-            };
+            return null;
         default:
             return state;
     }

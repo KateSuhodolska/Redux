@@ -1,4 +1,4 @@
-export const addProduct = (id, productData) => {
+export const addProduct = ({ id, productData }) => {
     return {
         type: "CART/ADD",
         payload: {
@@ -11,6 +11,6 @@ export const addProduct = (id, productData) => {
 export const removeProduct = (id) => {
     return {
         type: "CART/REMOVE",
-        payload: { id },
+        payload: id,
     };
 };
