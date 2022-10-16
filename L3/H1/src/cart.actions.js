@@ -1,9 +1,9 @@
-export const addProduct = ({ id, productData }) => {
+export const addProduct = ({ id, productName }) => {
     return {
         type: "CART/ADD",
         payload: {
             id,
-            productData,
+            productName,
         },
     };
 };

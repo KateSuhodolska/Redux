@@ -3,7 +3,7 @@ export const cartReducer = (state = { products: [] }, action) => {
         case "CART/ADD":
             return {
                 ...state,
-                products: [...state.products].concat(action.payload.productData),
+                products: [...state.products].concat(action.payload),
             };
 
         case "CART/REMOVE":

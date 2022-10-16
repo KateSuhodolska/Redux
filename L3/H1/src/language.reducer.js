@@ -1,14 +1,7 @@
-const initState = {
-    language: "en",
-};
-
-export const languageReducer = (state = initState, action) => {
+export const languageReducer = (state = "en", action) => {
     switch (action.type) {
         case "LANGUAGE/CHANGE":
-            return {
-                ...state,
-                language: action.payload.lang,
-            };
+            return action.payload;
 
         default:
             return state;
